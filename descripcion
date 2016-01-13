@@ -1,0 +1,88 @@
+PROBLEMA PRÁCTICO - PROGRAMACIÓN 
+
+CONTEXTO DEL PROBLEMA
+
+En la ciudad de Machala se está construyendo el centro comercial más grande de la 
+provincia,  ORO  MALL,  que  aparte  de  los  locales  comerciales,  constará  de  tres 
+locaciones  para  parqueo  de  vehículos,  dos torres  y  una  zona  en el  exterior  del  mall. 
+Todos los lugares estarán perfectamente numerados.
+La torre A se diseñó con 2 niveles de subsuelo (AS1 y AS2) y 3 pisos altos (AP1, AP2, 
+AP3),  es decir,  5 pisos  para  parqueos. Los niveles  de  subsuelo tienen  lugar  para 80 
+vehículos cada uno, y los pisos altos para 100 cada uno.
+La torre B se diseñó con 4 niveles altos (BP1, BP2, BP3, BP4), en el primer nivel (BP1) 
+hay 100 lugares de parqueo y en los demás 120 lugares en cada nivel.
+En el exterior del mall solo se habilitarán 80 lugares de parqueo.
+Los administradores necesitan que el control de acceso a las torres tenga información 
+constante de los lugares disponibles y ocupados desde las tres garitas de acceso en 
+cada locación: Garita A (torre A), Garita B (torre B) y Garita C (parqueo exterior).
+
+PREGUNTA DE INVESTIGACIÓN
+
+Se requiere diseñar e implementar una aplicación móvil para los encargados de Garita, 
+que cumpla con lo requerido por ORO MALL.
+
+Requisitos de proyecto:
+
+1.  Diseñar la solución utilizando una arquitectura cliente/servidor.
+
+2.  La aplicación cliente deberá ser implementada para Android.
+
+3.  Aplique  tecnología  para  aplicaciones  móviles  en  Android  que  garantice  alta 
+usabilidad en diferentes dispositivos móviles (Smart phones o tablets).
+
+4.  Utilice un DBMS Objeto-Relacional Open Source.
+
+5.  Diseñe la base de datos para la solución. Normalice. Implemente.
+
+6.  Diseñe  un  algoritmo  de  solución  que  incluya  un  arreglo  tridimensional  que 
+represente  el  sistema  de  parqueo  del  centro  comercial,  que  almacenará  la 
+información de disponibilidad de los parqueos durante la ejecución del programa.
+
+7.  Implemente la sincronización en tiempo real entre la estructura de datos (arreglo 
+tridimensional) del punto 6 y la base de datos.
+
+8.  Implemente seguridad de acceso al sistema: Usuario y contraseña. Manejo de 
+sesiones.
+
+9.  Diseñe correctamente la interfaz de usuario de la aplicación. Diseño minimalista. 
+Visualización de información rápida y legible.
+
+10.Muestre gráficamente la información de disponibilidad de los lugares de parqueo 
+por locación y por nivel (piso).
+
+11.El sistema deberá generar para impresión un tiquete de parqueo. Proceso: 
+a.  El cliente se acerca a la Garita.
+b.  El encargado hace clic en uno de los lugares disponibles.
+c.  El  sistema  bloquea  dicho  lugar  (aparece  como  lugar  NO  disponible  en 
+otra Garita).
+d.  Se abre un formulario para registrar la placa del vehículo y se acepta.
+e.  Se  imprime  tiquete  con  información  de  la  placa  y  el  lugar  de  parqueo: 
+Locación, nivel y lugar. 
+f.   El encargado entrega el tiquete al cliente.
+
+12.El sistema deberá registrar la liberación del lugar de parqueo. Proceso:
+g.  El cliente se acerca a la Garita desde el interior del mall.
+h.  El encargado recibe el tiquete.
+i.   El encargado verifica lugar de parqueo en el sistema y hace clic en él.
+j.   El sistema muestra en una ventana el número de placa para compararla 
+con la del tiquete y dejar el lugar disponible.
+
+13.El sistema deberá mostrar en pantalla información constante y en tiempo real del 
+número  de  lugares  disponibles  en  las  tres  locaciones  para  información  del 
+usuario (encargado de Garita) y clientes.
+
+14.Registre el historial de asignación y uso de parqueo por parte del encargado de 
+Garita (usuario).
+
+15.El sistema deberá emitir reportes de interés: Número de vehículos por locación, 
+nivel y por periodo de tiempo, etc.
+
+En el informe deberá presentar todo lo requerido de manera general en el componente 
+práctico del examen complexivo, además del diseño normalizado de la base de datos y 
+los algoritmos implementados.
+
+Durante  la  sustentación  deberá  demostrar  la  implementación  de  lo  solicitado  en  un 
+ambiente Cliente (Android) - Servidor (Windows/Linux) en red. Tres aplicaciones cliente 
+(una por cada Garita). Para la demostración del sistema deberá ejecutar el programa 
+en  tiempo  real  demostrando  la  sincronización  de  datos,  la  visualización  en  todas  las 
+Garitas y la impresión del tiquete en una impresora inalámbrica.
