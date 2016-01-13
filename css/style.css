@@ -1,0 +1,654 @@
+@font-face {
+  font-family: 'Trebuchet_MS';
+  src: url('../fonts/Trebuchet_MS/Trebuchet_MS.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Trebuchet_MS/Trebuchet_MS.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Trebuchet_MS/Trebuchet_MS.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Trebuchet_MS/Trebuchet_MS.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Trebuchet_MS/Trebuchet_MS.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+*{ margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*{ outline: none; font-family: 'Trebuchet_MS';}			
+body{
+	margin: 0;	
+	padding: 0;				
+	font-size: 0;
+	background-color: #FFFFFF;
+    /*overflow-x: hidden;*/
+}
+div{
+	font-size: 18px;
+}
+
+#main{
+    padding-top: 50px;
+}
+#ticket{
+    display: none; 
+    width: 240px;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0px 1px 4px #000;
+    margin-top: 15px;
+}
+.ticketBar {
+    background: #0070C0;
+    width: 100%;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #FFf;
+}
+.label {
+    margin: 2px 5px;
+    padding: 3px;
+    color: #8CB7FF;
+}
+#ticket input[type=button]{
+    background-color: rgba(0, 0, 0, 0);
+    width: 100px;
+    margin: 10px 6px;
+    padding: 10px 3px;
+    text-transform: uppercase;
+    border-radius: 30px;    
+    color: #0070C0;
+    cursor: pointer;
+}
+#ticket input[type=button]:hover{
+    border: 2px solid #0070C0;    
+}
+#ticket input#placa {
+    border: 0;
+    background-color: #0070C0;
+    border-bottom: 2px solid #05388E;
+    color: #FFF;
+    text-align: center;
+    font-size: 22px;
+    max-width: 95%;
+    display: block;
+    text-transform: uppercase;
+    vertical-align: top;
+    margin: 0 auto;
+    padding: 5px 2px;
+}
+::-webkit-input-placeholder{
+    color: #DADADA; 
+}
+:-moz-placeholder{
+    color: #DADADA; 
+}
+::-moz-placeholder{
+    color: #DADADA; 
+}
+:-ms-input-placeholder {  
+   color: #DADADA;  
+}
+
+.espacio {
+cursor: pointer;
+width: 50px;
+height: 50px;
+margin: 10px;
+font-size: 22px;
+border-radius: 30px;
+line-height: 50px;
+text-align: center;
+text-decoration: none;
+box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+box-sizing: content-box;
+outline: none;			   
+}
+.bar{
+background: #0070C0;
+width: 100%;
+display: block;
+text-align: center;
+font-size: 18px;
+color: #fff;
+box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);			    
+height: auto;
+font-style: normal;			    
+position: fixed;			   
+}
+.bar > h1{
+    margin: 5px auto;
+}
+.detail{
+padding-top: 40px;
+width: 90%;
+margin: 0 auto;
+color: #212121;
+}
+.detail span{
+display: block;
+font-size: 24px;
+text-align: center;
+color: #797474;
+}
+.verde{
+/*background-color: #4CAF50;*/
+background-color: #00FF1F;
+}
+.amarillo{
+background-color: #FFEB3B;
+/*background-color: #FBFF03;*/
+}
+.rojo{
+/*background-color: #D32F2F;*/	
+background-color: #F00;
+}
+#info {
+width: 100%;
+font-size: 0;
+}
+#info .dis,
+#info .blo,
+#info .nod{
+box-shadow: 1px 1px 1px #313131;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+#info .dis{
+background-color: #00FF1F;
+}
+#info .blo{
+background-color: #FBFF03;
+}
+#info .nod{
+background-color: #F00;
+}
+/*.park{
+width: 74px;
+display: inline-block;
+vertical-align: top;
+}*/
+#parking {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.localidad{
+margin: 0 auto;
+width: 98%;
+color: #fff;
+font-size: 24px;
+border-radius: 5px;
+border-bottom: 1px solid #3F51B5;
+background-color: #00c0ef !important;
+margin-top: 10px;
+}
+#infoGeneral .infoLoc {
+    margin: 10px;
+    background: #FBFBFB;    
+    border-radius: 5px;
+    box-shadow: 0px 3px 7px #888;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 200px;
+}
+.labelLoc {
+    color: #fff;
+    text-align: justify;
+    font-size: 16px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 10px;
+    background: #0e9aff;
+    padding: 5px 15px 5px 10px;
+}
+.labelLoc > i{
+    margin-right: 10px;
+}
+.porcLoc{
+    text-align: justify;
+    padding: 10px 20px;
+}
+.porcLoc > div {
+    font-size: 14px;
+}
+
+.porcLoc > span {
+    display: block;
+    height: 12px;
+    width: 1px;
+    margin: 4px 0;
+    font-size: 12px;
+    margin-left: 40px;
+}
+.porcLoc > span > strong {
+    margin-left: -40px;
+}
+/*.localidad span{
+    color: #fff;
+    font-size: 18px;    
+}*/
+.localidad #info > span {
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+    padding: 5px 0 5px 10px;
+}
+.localidad #info {
+    background: rgba(0,0,0,0.4);
+    padding: 5px;
+}
+.localidad #info div {
+    float: right;
+}
+.localidad #info div > strong {
+    display: block;
+    height: 10px;
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+.localidad #info span, #info div {
+    display: inline-block;
+    vertical-align: top;
+}
+.nivel {
+    margin: 10px;
+    background-color: #FFF;    
+    border-radius: 5px;
+    box-shadow: 0px 3px 7px #888;
+    color: #000;
+}
+.infoNivel{}
+.labelNivel,
+.porcNivel,
+.btnVerNivel{
+    display: inline-block;
+    vertical-align: top;
+    color: #000;
+}
+.labelNivel{
+    width: 45%;
+    font-size: 24px;
+    text-align: left;
+    padding: 10px;
+    color: #0070C0;
+}
+.porcNivel{
+    width: 34%;
+    vertical-align: top;
+}
+.porcNivel > span {
+    display: block;
+    height: 12px;
+    width: 1px;
+    margin: 4px 0;
+    font-size: 12px;
+    margin-left: 40px;
+}
+.porcNivel > span > strong {
+    margin-left: -40px;
+}
+.btnVerNivel {
+    width: 20%;
+    border: 2px solid rgba(90, 117, 162, 0.7);
+    height: 40px;
+    width: 60px;
+    background: #0070C0;
+    border-radius: 5px;
+    color: #FFF;    
+    margin: 5px;
+    cursor: pointer;
+    float: right;
+}
+.puestos {
+    display: none;
+}
+
+
+#login {
+                padding-top: 50px;
+            }
+
+            #formWrapper{
+                /*padding-top: 8%;*/
+                color: #0070C0;
+            }
+            #formWrapper input{
+                display: block;
+                padding: 10px;
+                width: 100%;
+                font-size: 18px;
+                text-align: center;
+                border: 0;
+            }
+            
+            #formWrapper input[type=text],
+            #formWrapper input[type=password]{ 
+                border-bottom: 1px solid #0070C0;
+            }
+            #formWrapper input[type=submit]{ 
+                margin-top: 10px;
+                padding: 10px;
+                width: 100%;
+                background-color: #DADADA;
+                cursor: pointer;
+            }
+            .formWrapper{
+                max-width: 300px;
+                width: 100%;
+                min-width: 180px;
+                margin-bottom: 50px;
+                margin: auto auto;
+            }
+            .formWrapper img{
+               margin: auto auto 20px auto;
+            }
+            .formTitle{
+                /*color: #387385;*/
+                font-weight: bold;
+                font-size: 120%;
+                text-align: center;
+            }
+            .smallText{
+                font-size: 80%;
+                margin: 8px 0px;
+            }
+            .smallText span{
+                display: block;
+                text-align: center;
+            }
+            
+            .smallText .button{
+                display: inline;
+                cursor: pointer;
+            }
+            .hidden{
+                display: none;
+            }
+            .download {
+                color: #000;
+                text-align: center;
+                border: 1px solid #FFF;
+                width: 200px;
+                margin: 15% auto;
+                padding: 10px;
+                border-radius: 3px;
+            }
+            .download a{
+                color: #FFF;
+                text-align: center;
+                text-decoration: none;
+            }
+            #menu{                
+                background: #06C;
+                position: fixed;
+                color: #FFF;
+                z-index: 5;
+                height: 100%;
+                width: 180px;
+                margin-left: -180px;
+            }
+            #menu ul{
+                margin: 0;
+                padding: 0;
+                /*margin-top: 40px;*/
+            }
+            #menu button {
+                background: rgba(0, 0, 0, 0);
+                color: #fff;
+                border: 0;
+                width: 100%;
+                font-size: 18px;
+                text-align: left;                
+            }
+            #menu li,
+            #menu button{
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                border-top: 2px solid #1976D2;
+                border-bottom: 1px solid #0051A1;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            #menu li:hover,
+            #menu button:hover{
+                border-bottom: 2px solid #1976D2;
+                border-top: 1px solid #0051A1;
+            }
+            #menu li > a{
+                color: #FFF;
+                text-decoration: none;
+            }
+            #btnMenu {
+                margin: 6px;
+                margin-left: 185px;
+                padding: 4px;
+                color: #dadada;
+                cursor: pointer;
+                font-size: 25px;                                           
+            }
+            #btnHideMenu {
+                margin: 6px;
+                /*margin-left: 185px;*/
+                padding: 4px;
+                color: #dadada;
+                cursor: pointer;
+                font-size: 25px;                                           
+            }
+            #btnMenu:hover,
+            #btnHideMenu:hover {
+                color: #FFF;                
+            }
+            #menu .flaticon-menu48:before {
+                content: "\e033";
+                margin: 0;
+                font-size: 25px;
+            }
+            #menu .flaticon-left224:before {
+                content: "\e030";
+                margin: 0px;
+                font-size: 25px;                
+            }
+            #menu .flaticon-users53:before,
+            #menu .flaticon-open207:before,
+            #menu .flaticon-arrow221:before,
+            #menu .flaticon-transport122:before,
+            #menu .flaticon-restaurants2:before{                
+                margin: 0;
+                padding-right: 10px;
+                font-size: 24px;
+            }
+            #menu #closeSessionBtn {
+                background-color: #fff;
+                padding: 2px;
+                color: #4285F4;
+            }
+            #id_user{
+                display: none;
+            }
+            #infoGeneral .flaticon-garage23:before {                
+                margin: 0;
+            }
+            #detalle {
+                margin: 0 auto;
+                margin-top: 15px;
+                width: 96%;
+                background: #FBFBFB;                
+                border-radius: 5px;
+                border-bottom: 2px solid #dadada;
+                color: #000;
+                text-shadow: 1px 1px 1px #FFF;
+            }
+            #detalle .flaticon-identification8:before,
+            #detalle .flaticon-building98:before,
+            #detalle .flaticon-boxes2:before,
+            #detalle .flaticon-parking12:before,
+            #detalle .flaticon-calendar92:before,
+            #detalle .flaticon-time44:before {                
+                margin: 0;
+                margin-right: 5px;
+                color: rgba(0, 0, 0, 0.5);
+                text-shadow: none;
+            }
+            #detalle .flaticon-identification8 {
+                border-radius: 5px 5px 0 0;
+                padding: 5px 10px;
+                background: #0e9aff;
+                font-size: 22px;
+                color: #FFF;
+                text-shadow: none;
+            }
+            #detalle .info,
+            #detalle .salida, 
+            #detalle .llegada {
+                display: inline-block;
+                vertical-align: top;
+                width: 30%;
+                padding: 10px;
+            }
+            #detalle .info{
+                width: 34%;
+            }
+            .info > div,
+            .llegada > div,
+            .salida > div{
+                margin-bottom: 3px;
+            }
+            #reporte{
+
+            }
+            #reporte .labelLoc {               
+                font-size: 26px;                
+            }
+
+            #reporte .infoLoc {                
+                width: 97%;
+                display: block;
+                margin: 10px;
+                background: #FBFBFB;    
+                border-radius: 5px;
+                box-shadow: 0px 3px 7px #888;                
+            }
+            #reporte .labelNivel {
+                width: auto;
+                font-size: 22px;               
+                text-align: left;
+                padding: 10px;
+                color: #0070C0;
+            }
+            #reporte .porcNivel {
+                width: auto;
+                vertical-align: top;
+            }
+            #reporte #info > span {
+                font-size: 32px;
+                font-weight: bold;
+                text-shadow: 1px 1px 1px #000;
+            }
+            #reporte #info {
+                background: rgba(0,0,0,0.4);
+                padding: 5px;
+            }
+            #reporte #info div {
+                float: right;
+            }
+            #reporte #info div > strong {
+                display: block;
+                height: 10px;
+                font-size: 10px;
+                margin-bottom: 4px;
+            }
+            #reporte #info span, #info div {
+                display: inline-block;
+                vertical-align: top;
+            }
+            #reporte .infoNivel {
+                border-top: 1px solid #dadada;
+            }
+            #reporte .porcLoc {   
+                font-weight: bold;
+            }
+            #reporte .total {
+                padding: 0 10px;
+            }
+            #reporte .espacio { 
+                cursor: default;
+                width: 30px;
+                height: 30px;                
+                line-height: 30px;                
+            }
+            .error{
+                text-align: center;
+                color: #4285F4;
+                margin-top: 20px;
+                font-weight: bold;              
+            }
+@media screen and (min-width: 1000px){
+
+}
+@media screen and (max-width:1000px){
+
+}
+@media screen and (max-width:430px){
+
+}
+@media screen and (max-width:420px){
+    #infoGeneral .infoLoc {        
+        width: 100%;
+        display: block;
+        vertical-align: top;        
+    }
+    #parking .labelNivel, 
+    #parking .porcNivel {
+        width: 48%;
+        display: inline-block;
+    }    
+    #parking .porcNivel {        
+        margin-left: 10px;
+    }
+    #parking .btnVerNivel {   
+        display: block;
+        margin: 0 auto;
+        height: 35px;
+        float: none;
+        margin-top: 5px;
+    }
+    #reporte .infoLoc {        
+        width: 95%;        
+    }
+}
+@media screen and (max-width:360px) { 
+    #parking .labelNivel,
+    #parking .porcNivel {
+        width: 100%;
+        display: block;
+    }
+    #detalle .info, 
+    #detalle .salida, 
+    #detalle .llegada {
+        display: block;
+        vertical-align: top;
+        width: 100%;
+    }
+    #reporte .infoLoc {        
+        width: 94%;        
+    }
+    #reporte .labelNivel,
+    #reporte .porcNivel{
+        display: block;
+    }
+    #reporte .porcNivel {        
+        margin-left: 10px;
+    }
+    .flaticon-garage23:before {        
+        margin: 0;
+    }
+}
+@media screen and (max-width:240px){
+    #infoGeneral .infoLoc {        
+        width: 90%;        
+    }    
+    #reporte .infoLoc {        
+        width: 90%;        
+    }
+    #reporte .labelLoc {
+        font-size: 16px;
+    }
+    
+}
